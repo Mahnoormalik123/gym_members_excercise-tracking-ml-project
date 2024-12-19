@@ -27,12 +27,6 @@ if uploaded_file is not None:
     st.write("Dataset Preview:")
     st.dataframe(df.head())
 
-# Construct the path to the Downloads folder
-downloads_path = os.path.join(os.path.expanduser("~"), "Downloads", "fitness image.png")
-
-# Display the image
-st.image(downloads_path, caption="Fitness and Machine Learning", use_container_width=True)
-
 # Sidebar for user input
 st.sidebar.header("User Input Parameters")
 age = st.sidebar.slider("Age", 18, 100, 30)
